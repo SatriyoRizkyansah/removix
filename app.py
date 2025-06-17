@@ -11,19 +11,29 @@ def index():
 
 @app.route('/upload', methods=['POST'])
 def upload():
-    file = request.files['image']
-    if not file:
-        return "No file uploaded", 400
+    try:
+        file = request.files['image']
+        if not file:
+            return "No file uploaded", 400
 
-    input_bytes = file.read()
-    output_bytes = remove(input_bytes)
-
-    return send_file(
-        io.BytesIO(output_bytes),
-        mimetype='image/png',
-        as_attachment=True,
-        download_name='hasil.png'
-    )
+        # Read and process the image
+        input_bytes = file.read()
+        output_bytes = remove(input_bytes)
+        
+        # Create response with file download
+        response = send_file(
+            io.BytesIO(output_bytes),
+            mimetype='image/png',
+            as_attachment=True,
+            download_name='hasil.png'
+        )
+        
+        # Add header to indicate processing is complete
+        response.headers['X-Processing-Complete'] = 'true'
+        return response
+        
+    except Exception as e:
+        return str(e), 500
 
 if __name__ == '__main__':
     app.run(debug=True)

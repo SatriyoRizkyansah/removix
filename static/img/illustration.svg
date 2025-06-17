@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+    <rect width="400" height="300" fill="#f3f4f6"/>
+    <g transform="translate(100,50)">
+        <!-- Background Image Icon -->
+        <rect x="0" y="0" width="200" height="150" rx="10" fill="#e2e8f0"/>
+        <path d="M50,130 L150,50 L200,130" stroke="#6366f1" stroke-width="4" fill="none"/>
+        <circle cx="70" cy="40" r="15" fill="#6366f1"/>
+        
+        <!-- Magic Wand -->
+        <g transform="translate(160,20) rotate(-45)">
+            <rect x="0" y="0" width="40" height="8" rx="4" fill="#8b5cf6"/>
+            <circle cx="45" cy="4" r="4" fill="#8b5cf6"/>
+        </g>
+        
+        <!-- Sparkles -->
+        <circle cx="180" cy="30" r="2" fill="#6366f1"/>
+        <circle cx="190" cy="20" r="2" fill="#6366f1"/>
+        <circle cx="170" cy="25" r="2" fill="#6366f1"/>
+    </g>
+    <text x="200" y="250" fill="#4b5563" text-anchor="middle" font-family="Arial" font-size="16">Remove Background Demo</text>
+</svg>

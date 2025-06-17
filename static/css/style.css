@@ -1,0 +1,92 @@
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #6366f1;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.hero {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+}
+.upload-box {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+.upload-box.drag-over {
+  background: #f8fafc;
+  border: 2px dashed #6366f1;
+}
+.upload-area {
+  border: 2px dashed #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.upload-area:hover {
+  border-color: #6366f1;
+  background: #f8fafc;
+}
+#preview {
+  max-width: 100%;
+  max-height: 300px;
+  margin: 1rem 0;
+  display: none;
+  border-radius: 0.5rem;
+}
+.illustration {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+.error-message {
+  color: #dc2626;
+  display: none;
+  margin-top: 1rem;
+}
+.upload-prompt {
+  padding: 1rem;
+}
+.features-section {
+  margin-top: 4rem;
+}
+.feature-card {
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
