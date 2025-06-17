@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Removix - Make Your Images Stand Out!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      .hero {
+        background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+        color: white;
+        padding: 40px 0;
+      }
+      .upload-box {
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero mb-4">
+      <div class="container text-center">
+        <h1 class="display-5 fw-bold">Hapus Background Gambar</h1>
+        <p class="lead">Ubah gambar Anda secara instan dengan teknologi AI kami</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="upload-box text-center">
+        <h2 class="h3 mb-3">Upload Gambar Anda</h2>
+        <p class="text-muted mb-3">Format yang didukung: JPG, PNG, JPEG</p>
+        <form action="/upload" method="post" enctype="multipart/form-data" class="mx-auto" style="max-width: 400px">
+          <input type="file" name="image" accept="image/*" required class="form-control form-control-lg mb-3" />
+          <button type="submit" class="btn btn-primary btn-lg px-4">Hapus Background</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="text-center mt-4">
+      <p class="text-muted">© 2025 Removix</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
