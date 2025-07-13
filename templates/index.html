@@ -13,24 +13,26 @@
     <!-- Loading Overlay -->
     <div class="loader-container" id="loader">
       <span class="loader"></span>
-      <p class="mt-3">Sedang memproses gambar Anda...</p>
+      <p class="mt-3">Processing your image...</p>
     </div>
 
     <div class="hero mb-5">
       <div class="container text-center">
-        <h1 class="display-4 fw-bold">Hapus Background Gambar</h1>
-        <p class="lead">Ubah gambar Anda secara instan dengan teknologi AI kami</p>
+        <h1 class="display-4 fw-bold">Remove Image Background</h1>
+        <p class="lead">Transform your images instantly with our AI technology</p>
       </div>
     </div>
     <div class="main-content">
       <div class="container">
         <!-- Illustration -->
-        <div class="text-center mb-5" style="max-width: 40rem; margin: auto"><img src="{{ url_for('static', filename='img/illustration.svg') }}" alt="Remove Background Demo" class="illustration mb-4" /></div>
+        <div class="text-center mb-5" style="max-width: 40rem; margin: auto">
+          <img src="{{ url_for('static', filename='img/illustration.svg') }}" alt="Remove Background Demo" class="illustration mb-4" />
+        </div>
 
         <!-- Upload Box -->
         <div class="upload-box text-center mb-5 shadow-sm">
-          <h2 class="h3 mb-3">Upload Gambar Anda</h2>
-          <p class="text-muted mb-4">Format yang didukung: JPG, PNG, JPEG</p>
+          <h2 class="h3 mb-3">Upload Your Image</h2>
+          <p class="text-muted mb-4">Supported formats: JPG, PNG, JPEG</p>
           <form action="/upload" method="post" enctype="multipart/form-data" class="mx-auto" style="max-width: 400px" id="uploadForm">
             <div class="upload-area" id="dropZone">
               <input type="file" name="image" accept="image/*" required id="fileInput" style="display: none" />
@@ -39,8 +41,8 @@
                   <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
                   <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z" />
                 </svg>
-                <p>Klik atau seret gambar ke sini</p>
-                <p class="text-muted small">Maksimum ukuran file: 5MB</p>
+                <p>Click or drag an image here</p>
+                <p class="text-muted small">Max file size: 5MB</p>
               </div>
               <img id="preview" alt="Preview" style="display: none" />
               <p id="fileName" class="text-muted mt-2" style="display: none"></p>
@@ -52,7 +54,7 @@
                   d="M9.5 2.672a.5.5 0 1 0 1 0V.843a.5.5 0 0 0-1 0v1.829Zm4.5.035A.5.5 0 0 0 13.293 2L12 3.293a.5.5 0 1 0 .707.707L14 2.707ZM7.293 4A.5.5 0 1 0 8 3.293L6.707 2A.5.5 0 0 0 6 2.707L7.293 4Zm-.621 2.5a.5.5 0 1 0 0-1H4.843a.5.5 0 1 0 0 1h1.829Z"
                 />
               </svg>
-              Hapus Background
+              Remove Background
             </button>
           </form>
         </div>
@@ -65,8 +67,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#6366f1" class="bi bi-lightning-charge mb-3" viewBox="0 0 16 16">
                   <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z" />
                 </svg>
-                <h3 class="h5">Cepat & Akurat</h3>
-                <p class="text-muted mb-0">Proses dalam hitungan detik dengan hasil berkualitas tinggi</p>
+                <h3 class="h5">Fast & Accurate</h3>
+                <p class="text-muted mb-0">Process takes seconds with high-quality results</p>
               </div>
             </div>
           </div>
@@ -78,8 +80,8 @@
                     d="M9.5 2.672a.5.5 0 1 0 1 0V.843a.5.5 0 0 0-1 0v1.829Zm4.5.035A.5.5 0 0 0 13.293 2L12 3.293a.5.5 0 1 0 .707.707L14 2.707ZM7.293 4A.5.5 0 1 0 8 3.293L6.707 2A.5.5 0 0 0 6 2.707L7.293 4Zm-.621 2.5a.5.5 0 1 0 0-1H4.843a.5.5 0 1 0 0 1h1.829Z"
                   />
                 </svg>
-                <h3 class="h5">AI Canggih</h3>
-                <p class="text-muted mb-0">Menggunakan teknologi AI terkini untuk hasil terbaik</p>
+                <h3 class="h5">Powerful AI</h3>
+                <p class="text-muted mb-0">Cutting-edge AI technology for the best results</p>
               </div>
             </div>
           </div>
@@ -91,14 +93,15 @@
                     d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937z"
                   />
                 </svg>
-                <h3 class="h5">Mudah Digunakan</h3>
-                <p class="text-muted mb-0">Cukup upload dan tunggu hasilnya</p>
+                <h3 class="h5">Easy to Use</h3>
+                <p class="text-muted mb-0">Just upload and wait for the result</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <!-- Footer -->
     <footer class="py-4">
       <div class="container">
